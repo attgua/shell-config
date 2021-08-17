@@ -1,10 +1,10 @@
 # shell-config
 
 
+Open the terminal and set::
+
 ```
-
 vim ~/.zshrc
-
 ```
 
 
@@ -20,8 +20,8 @@ zstyle ':completion:*' menu select=2
 ```
 
 
+Activate the settings:
+
 ``` 
-
 source ~/.zshrc
-
 ```
