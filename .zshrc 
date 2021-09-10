@@ -1,0 +1,25 @@
+autoload  bashcompinit
+bashcompinit
+
+autoload -Uz compinit
+compinit
+
+#To change the color of User and Client
+autoload -U colors && colors
+PS1="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[white]%}%m %{$fg[red]%}%~ %{$reset_color%}%% "
+#PROMPT='%F{green}%*%f:%F{blue}%~%f %% '
+
+#For K8s
+source <(kubectl completion zsh)
+alias k=kubectl
+
+alias ls="ls -a"
+
+complete -F __start_kubectl k
+zstyle ':completion:*' menu select=2
+
+#For activation of highlightining syntax
+source /Users/atts/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#For actiovation of suggested auto complete
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
